@@ -1,0 +1,25 @@
+.article-card {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background-color: $color-primary;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+  }
+  &__content {
+    margin: 26px 0;
+  }
+  h2 {
+    a {
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}

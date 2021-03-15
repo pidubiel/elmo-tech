@@ -29,7 +29,7 @@ const HomePage = () => (
             <div className="intro-banner__box">
               <h2>Montaż instalacji</h2>
               <ul>
-                <li><img src={iconA} alt="" />Fotowoltalicznych</li>
+                <li><img src={iconA} alt="" />Fotowoltaicznych</li>
                 <li><img src={iconB} alt="" />Elektrycznych</li>
               </ul>
             </div>

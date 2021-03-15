@@ -1,84 +1,46 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-family: Helvetica, sans-serif;
-  @include media-breakpoint-down(md) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  &__logo {
-    position: relative;
-    margin-left: 10px;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 5px;
-      top: 0;
-      bottom: 0;
-      left: -10px;
-      background-color: $color-primary;
-    }
-    @include media-breakpoint-down(md) {
-      margin-bottom: 12px;
-    }
-  }
-  &__nav {
-    display: flex;
-    li {
-      margin-left: 10px;
-      @include media-breakpoint-down(md) {
-        margin-left: 0;
-        margin-right: 10px;
-      }
-    }
+  justify-content: space-between;
+  .contact-us {
+    display: block;
+    text-align: right;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 30px;
     a {
-      display: inline-block;
-      padding: 7px 15px;
-      border-radius: 4px;
-      background-color: $color-primary;
-      color: white;
+      margin-left: 25px;
+      font-weight: 400;
+      color: black;
       text-decoration: none;
-      transition: all 0.3s;
-      @include media-breakpoint-down(lg) {
-        font-size: 14px;
-      }
-      @include media-breakpoint-down(sm) {
-        font-size: 12px;
-      }
-      &:hover {
-        color: black;
-        background-color: $color-secondary;
-      }
     }
   }
-  &__contact-bar {
-    font-family: Helvetica, sans-serif;
-    background-color: $color-secondary;
-    padding: 7px 0;
-    p {
-      font-weight: 600;
-      margin: 0;
-      font-size: 12px;
-      span {
-        font-weight: 200;
-      }
+  .navbar {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #E4E3E3;
     }
   }
-  p {
-    margin: 0;
-    &:first-child {
-      font-weight: 600;
-      font-size: 20px;
-      color: $color-primary;
-      @include media-breakpoint-down(md) {
-        font-size: 18px;
-      }
+  .navbar__item {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    color: black;
+    transition: all 0.2s ease;
+    &:hover {
+      color: $color-accent;
     }
-    &:last-child {
-      color: gray;
-      font-weight: 200;
-      font-size: 14px;
+    img {
+      width: 18px;
+      margin: 0 10px 4px 0;
     }
   }
 }

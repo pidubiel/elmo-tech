@@ -1,12 +1,116 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import introImg from './../../static/img/intro-img.png'
+import iconA from './../../static/img/icons/iconA.svg'
+import iconB from './../../static/img/icons/iconB.svg'
+import iconC from './../../static/img/icons/iconC.svg'
+import iconD from './../../static/img/icons/iconD.svg'
+import iconE from './../../static/img/icons/iconE.svg'
 
-export const IndexPageTemplate = ({
+const HomePage = () => (
+  <>
+    <section className="intro-banner">
+      <div className="container">
+        <div className="location-list">
+          <ul>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30"><defs></defs><path d="M18,3A10.492,10.492,0,0,0,7.5,13.5C7.5,21.375,18,33,18,33S28.5,21.375,28.5,13.5A10.492,10.492,0,0,0,18,3Zm0,14.25a3.75,3.75,0,1,1,3.75-3.75A3.751,3.751,0,0,1,18,17.25Z" transform="translate(-7.5 -3)" /></svg>małopolskie</li>
+            <li>              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30"><defs></defs><path d="M18,3A10.492,10.492,0,0,0,7.5,13.5C7.5,21.375,18,33,18,33S28.5,21.375,28.5,13.5A10.492,10.492,0,0,0,18,3Zm0,14.25a3.75,3.75,0,1,1,3.75-3.75A3.751,3.751,0,0,1,18,17.25Z" transform="translate(-7.5 -3)" /></svg>podkarpackie</li>
+            <li>              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30"><defs></defs><path d="M18,3A10.492,10.492,0,0,0,7.5,13.5C7.5,21.375,18,33,18,33S28.5,21.375,28.5,13.5A10.492,10.492,0,0,0,18,3Zm0,14.25a3.75,3.75,0,1,1,3.75-3.75A3.751,3.751,0,0,1,18,17.25Z" transform="translate(-7.5 -3)" /></svg>świętokrzyskie</li>
+            <li>              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="30" viewBox="0 0 21 30"><defs></defs><path d="M18,3A10.492,10.492,0,0,0,7.5,13.5C7.5,21.375,18,33,18,33S28.5,21.375,28.5,13.5A10.492,10.492,0,0,0,18,3Zm0,14.25a3.75,3.75,0,1,1,3.75-3.75A3.751,3.751,0,0,1,18,17.25Z" transform="translate(-7.5 -3)" /></svg>lubelskie</li>
+          </ul>
+        </div>
+        <div className="intro-banner__wrapper">
+          <div className="intro-banner__text">
+            <div className="intro-banner__box">
+              <h2>Montaż instalacji</h2>
+              <ul>
+                <li><img src={iconA} alt="" />Fotowoltalicznych</li>
+                <li><img src={iconB} alt="" />Elektrycznych</li>
+              </ul>
+            </div>
+            <div className="intro-banner__box intro-banner__box--secondary">
+              <h2>Dlaczego Elmo-tech</h2>
+              <ul>
+                <li><img src={iconC} alt="" />profesjonalny sprzęt</li>
+                <li><img src={iconD} alt="" />gwarancja najwyższej jakości</li>
+                <li><img src={iconE} alt="" />darmowa wycena u klienta</li>
+              </ul>
+            </div>
+          </div>
+          <img className="intro-banner__img" src={introImg} alt="" />
+          {/* <div className="intro-banner__img" style="{backgroundImage: url(`${introImg}`)}">
+
+          </div> */}
+        </div>
+      </div>
+    </section>
+    <section className="advantages">
+      <div className="container">
+        <div className="advantages__wrapper">
+          <h2>Zastanawiasz się nad instalacją fotowoltaiczną?</h2>
+          <ul>
+            <li>Umów się na <span>bezpłatny audyt i wycenę</span> już dziś!</li>
+            <li>Dobieramy <span>optymalną</span> instalację pod zapotrzebowanie oraz oczekiwania klienta</li>
+            <li>Przy każdej instalacji wykonujemy <span>niezbędne</span> pomiary instalacji elektrycznej</li>
+            <li>Zapewniamy <span>solidny</span> montaż, dzięki któremu instalacja jest bezobsługowa oraz nie sprawia żadnych problemów</li>
+            <li>Do każdej instalacji klient otrzymuje <span>komplet</span> dokumentów do zakładu energetycznego</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section className="benefits">
+      <div className="container">
+        <div className="benefits__wrapper">
+          <h2>Co zyskujesz</h2>
+          <ul>
+            <li>niższe rachunki za prąd</li>
+            <li>energię przyjazną środowisku</li>
+            <li>bezawaryjną instalację</li>
+            <li>zwrot kosztów już po kilku latach</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section className="portfolio">
+      <div className="container">
+        <div className="portfolio__wrapper">
+          <div className="portfolio__item">
+            <div className="portfolio__text">
+              <h3>Instalacja fotowoltaiczna na gruncie</h3>
+              <ul>
+                <li>moc 2.56 kWp</li>
+                <li>konstrukcja jednooporowa</li>
+                <li>kąt nachylenia 30 stopni</li>
+              </ul>
+            </div>
+            <div className="portfolio__img">
+            </div>
+          </div>
+          <div className="portfolio__item">
+            <div className="portfolio__text">
+              <h3>Oświetlenie rgb sali weselnej</h3>
+              <ul>
+                <li>800 metrów taśm LED</li>
+                <li>sterowanie radiowe</li>
+                <li>konfiguracja kolorystyki i natężenia jasności</li>
+                <li>dynamiczny dobór</li>
+              </ul>
+            </div>
+            <div className="portfolio__img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </>
+);
+
+const IndexPageTemplate = ({
   image,
   title,
   heading,
@@ -131,9 +235,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="container">
-        <h1>Test</h1>
-      </div>
+      <HomePage />
       {/* <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}

@@ -2,21 +2,48 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 8px;
+  }
+  &__logo {
+    width: 188px;
+    @include media-breakpoint-down(lg) {
+      width: 120px;
+    }
+  }
   .contact-us {
     display: block;
     text-align: right;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 800;
     margin-bottom: 30px;
+    @include media-breakpoint-down(lg) {
+      //font-size: 20px;
+      margin-bottom: 24px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
     a {
       margin-left: 25px;
       font-weight: 400;
       color: black;
       text-decoration: none;
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
     }
   }
   .navbar {
     position: relative;
+    @include media-breakpoint-down(lg) {
+      text-align: right;
+    }
     &:after {
       position: absolute;
       content: "";
@@ -35,12 +62,42 @@
     margin-left: 35px;
     color: black;
     transition: all 0.2s ease;
-    &:hover {
+    outline: none;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+      margin-left: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+      line-height: 28px;
+    }
+    &:hover, &:active, &:focus {
       color: $color-accent;
     }
     img {
       width: 18px;
       margin: 0 10px 4px 0;
+      @include media-breakpoint-down(lg) {
+        width: 13px;
+        margin: 0 6px 4px 0;
+      }
+    }
+    &--active {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #E4E3E3;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
     }
   }
 }

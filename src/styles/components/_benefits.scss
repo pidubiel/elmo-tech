@@ -1,0 +1,37 @@
+.benefits {
+  &__item {
+    p {
+      text-align: center;
+      margin-top: 20px;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+    }
+  }
+&__image {
+  max-width: 130px;
+  margin: auto;
+}
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+    li {
+      width: calc((100% / 4) - (70px / 4));
+      @include media-breakpoint-down(md) {
+        width: calc((100% / 2) - (7px / 2));
+        margin-bottom: 20px;
+      }
+      &:nth-child(even) {
+        margin-top: 40px;
+        @include media-breakpoint-down(md) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

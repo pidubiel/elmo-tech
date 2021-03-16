@@ -67,4 +67,17 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+benefits:
+  image1:
+    alt: Benefit 1 image
+    image: /img/icons/benefit1.png
+  image2:
+    alt: Benefit 2 image
+    image: /img/icons/benefit2.png
+  image3:
+    alt: Benefit 3 image
+    image: /img/icons/benefit3.png
+  image4:
+    alt: Benefit 4 image
+    image: /img/icons/benefit4.png
 ---

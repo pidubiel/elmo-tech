@@ -4,14 +4,15 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import introImg from './../../static/img/intro-img.png'
+//import introImg from './../../static/img/intro-img.png'
+import Img from 'gatsby-image'
 import iconA from './../../static/img/icons/iconA.svg'
 import iconB from './../../static/img/icons/iconB.svg'
 import iconC from './../../static/img/icons/iconC.svg'
 import iconD from './../../static/img/icons/iconD.svg'
 import iconE from './../../static/img/icons/iconE.svg'
 
-const HomePage = () => (
+const HomePage = ({ data, benefits }) => (
   <>
     <section className="intro-banner">
       <div className="container">
@@ -42,7 +43,8 @@ const HomePage = () => (
               </ul>
             </div>
           </div>
-          <img className="intro-banner__img" src={introImg} alt="" />
+          {/* <img className="intro-banner__img" src={introImg} alt="" /> */}
+          <Img className="intro-banner__img" fluid={data.file.childImageSharp.fluid} />
           {/* <div className="intro-banner__img" style="{backgroundImage: url(`${introImg}`)}">
 
           </div> */}
@@ -52,7 +54,7 @@ const HomePage = () => (
     <section className="advantages">
       <div className="container">
         <div className="advantages__wrapper">
-          <h2>Zastanawiasz się nad instalacją fotowoltaiczną?</h2>
+          <h2 className="subheader">Zastanawiasz się nad instalacją fotowoltaiczną?</h2>
           <ul>
             <li>Umów się na <span>bezpłatny audyt i wycenę</span> już dziś!</li>
             <li>Dobieramy <span>optymalną</span> instalację pod zapotrzebowanie oraz oczekiwania klienta</li>
@@ -66,12 +68,40 @@ const HomePage = () => (
     <section className="benefits">
       <div className="container">
         <div className="benefits__wrapper">
-          <h2>Co zyskujesz</h2>
+          <h2 className="subheader subheader--secondary">Co zyskujesz</h2>
           <ul>
-            <li>niższe rachunki za prąd</li>
-            <li>energię przyjazną środowisku</li>
-            <li>bezawaryjną instalację</li>
-            <li>zwrot kosztów już po kilku latach</li>
+            <li>
+              <div className="benefits__item">
+                <div className="benefits__image">
+                  <Img fluid={benefits.image1.image.childImageSharp.fluid} />
+                </div>
+                <p>niższe rachunki za prąd</p>
+              </div>
+            </li>
+            <li>
+              <div className="benefits__item">
+                <div className="benefits__image">
+                  <Img fluid={benefits.image2.image.childImageSharp.fluid} />
+                </div>
+                <p>energię przyjazną środowisku</p>
+              </div>
+            </li>
+            <li>
+              <div className="benefits__item">
+                <div className="benefits__image">
+                  <Img fluid={benefits.image3.image.childImageSharp.fluid} />
+                </div>
+                <p>bezawaryjną instalację</p>
+              </div>
+            </li>
+            <li>
+              <div className="benefits__item">
+                <div className="benefits__image">
+                  <Img fluid={benefits.image4.image.childImageSharp.fluid} />
+                </div>
+                <p>zwrot kosztów już po kilku latach</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -228,14 +258,21 @@ IndexPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  benefits: PropTypes.shape({
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  }),
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  console.log(frontmatter.benefits);
 
   return (
     <Layout>
-      <HomePage />
+      <HomePage data={data} benefits={frontmatter.benefits} />
       {/* <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -261,6 +298,13 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
+    file(relativePath: {eq: "intro-img.png"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
@@ -291,6 +335,48 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        benefits {
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image2 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image3 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image4 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

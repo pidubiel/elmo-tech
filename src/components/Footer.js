@@ -10,93 +10,36 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
+      <footer className="footer">
+        <div className="container">
+          <div className="footer__wrapper">
+            <div className="footer__column">
+              <h4 className="footer__heading">Kontakt</h4>
+              <a className="footer__link" href="tel:+48 576 226 448">+48 576 226 448</a>
+              <a className="footer__link" href="mailto:elmotech.sp@gmail.com">elmotech.sp@gmail.com</a>
+              <div className="footer__fb">
+                <a className="footer__link" href="https://www.facebook.com/elmotechsp" target="_blank">Dołącz do nas<svg xmlns="http://www.w3.org/2000/svg" width="23.319" height="23.319" viewBox="0 0 23.319 23.319"><defs><style>{`.a{fill:#fff;}`}</style></defs><path class="a" d="M20.821,2.25H2.5A2.5,2.5,0,0,0,0,4.748V23.071a2.5,2.5,0,0,0,2.5,2.5H9.643V17.641H6.363V13.91H9.643V11.065c0-3.235,1.926-5.022,4.876-5.022a19.866,19.866,0,0,1,2.89.252V9.471H15.78a1.866,1.866,0,0,0-2.1,2.016V13.91h3.58l-.573,3.732H13.677v7.928h7.144a2.5,2.5,0,0,0,2.5-2.5V4.748a2.5,2.5,0,0,0-2.5-2.5Z" transform="translate(0 -2.25)" /></svg></a>
               </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
+            </div>
+            <div className="footer__column">
+              <h4 className="footer__heading">Adres</h4>
+              <p>ul. Krzywa 11</p>
+              <p>37-400 Nisko</p>
+              <p>woj. podkarpackie</p>
+            </div>
+            <div className="footer__column">
+              <h4 className="footer__heading">Menu</h4>
+              <Link className="footer__link" to="/">Strona główna</Link>
+              <Link className="footer__link" to="/contact">Kontakt</Link>
+              <Link className="footer__link" to="/blog">Nasze Realizacje</Link>
+            </div>
+            <div className="footer__column">
+              <div className="footer__logo">
+                <Link className="footer__link" to="/">
+                  <img src={logo} alt="Elmo-tech" />
+                </Link>
               </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
+
             </div>
           </div>
         </div>

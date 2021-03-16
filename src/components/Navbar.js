@@ -44,7 +44,7 @@ const Navbar = class extends React.Component {
           <div className="header">
             <div className="navbar-brand">
               <Link to="/" className="navbar-item" title="Logo">
-                <img src={logo} alt="Kaldi" style={{ width: '188px' }} />
+                <img className="header__logo" src={logo} alt="Elmo-tech" />
               </Link>
               {/* Hamburger menu */}
               <div
@@ -63,13 +63,13 @@ const Navbar = class extends React.Component {
             >
               <span className="contact-us">skontaktuj się z nami już dziś <a href="tel:+48 576 226 448">+48 576 226 448</a></span>
               <div className="navbar">
-                <Link className="navbar__item" to="/">
+                <Link className="navbar__item" activeClassName="navbar__item--active" to="/">
                   <img src={arrow} alt="" />Strona główna
               </Link>
-                <Link className="navbar__item" to="/contact">
+                <Link className="navbar__item" activeClassName="navbar__item--active" to="/contact">
                   <img src={arrow} alt="" />Kontakt
               </Link>
-                <Link className="navbar__item" to="/blog">
+                <Link className="navbar__item" activeClassName="navbar__item--active" to="/blog">
                   <img src={arrow} alt="" />Nasze Realizacje
               </Link>
               </div>

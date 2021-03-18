@@ -12,6 +12,9 @@ const Navbar = class extends React.Component {
       navBarActiveClass: '',
     }
   }
+  componentWillUnmount() {
+    document.body.style.overflow = 'unset';
+  }
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(

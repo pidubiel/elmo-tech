@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: space-between;
   @include media-breakpoint-down(md) {
-    flex-direction: column;
     margin-bottom: 30px;
   }
   @include media-breakpoint-down(sm) {
@@ -22,12 +21,10 @@
     font-weight: 800;
     margin-bottom: 30px;
     @include media-breakpoint-down(lg) {
-      //font-size: 20px;
       margin-bottom: 24px;
     }
-    @include media-breakpoint-down(sm) {
-      font-size: 15px;
-      margin-bottom: 40px;
+    @include media-breakpoint-down(md) {
+      display: none;
     }
     a {
       margin-left: 25px;
@@ -44,6 +41,9 @@
     @include media-breakpoint-down(lg) {
       text-align: right;
     }
+    @include media-breakpoint-down(md) {
+      text-align: left;
+    }
     &:after {
       position: absolute;
       content: "";
@@ -52,6 +52,52 @@
       right: 0;
       height: 2px;
       background-color: #E4E3E3;
+    }
+    &-menu {
+      @include media-breakpoint-down(md) {
+        box-shadow: 2px 5px 55px 0px rgba(0,0,0,0.37);
+        left: 0;
+        top: 0;
+        height: 100vh;
+        padding: 40px;
+        z-index: 1;
+        pointer-events: none;
+        position: absolute;
+        background-color: white;
+        transition: $transition-base;
+        transform: translateX(-300px);
+      }
+    }
+    &__phone {
+      display: none;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+      @include media-breakpoint-down(md) {
+        display: block;
+        margin: 0 35px 0 auto;
+      }
+    }
+    &__switcher {
+      display: none;
+      @include media-breakpoint-down(md) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      span {
+        @include media-breakpoint-down(md) {
+          background-color: black;
+          width: 2.5em;
+          height: 0.2em;
+          margin: 0.35em 0;
+          display: block;
+          transition: all .4s ease;
+          transform-origin: 0 0;
+        }
+      }
     }
   }
   .navbar__item {
@@ -67,9 +113,10 @@
       font-size: 14px;
       margin-left: 20px;
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       display: block;
-      line-height: 28px;
+      line-height: 55px;
+      margin-left: 0;
     }
     &:hover, &:active, &:focus {
       color: $color-accent;
@@ -94,10 +141,33 @@
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         border-top: 8px solid #E4E3E3;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           display: none;
         }
       }
+    }
+  }
+  &--menu-open {
+    .navbar__switcher {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(1px, -1px);
+        }
+        &:nth-child(2) {
+          transform: scaleX(0);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(1px, 0);
+        }
+      }
+    }
+    .navbar-menu {
+      transform: translateX(0);
+      pointer-events: all;
+    }
+    html, body {
+      height: 100%;
+      overflow-y: hidden;
     }
   }
 }

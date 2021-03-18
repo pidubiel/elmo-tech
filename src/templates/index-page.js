@@ -68,7 +68,7 @@ const HomePage = ({ data, benefits }) => (
     <section className="benefits">
       <div className="container">
         <div className="benefits__wrapper">
-          <h2 className="subheader subheader--secondary">Co zyskujesz</h2>
+          <h2 className="subheader subheader--secondary">Co zyskujesz?</h2>
           <ul>
             <li>
               <div className="benefits__item">

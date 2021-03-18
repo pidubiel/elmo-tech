@@ -12,7 +12,6 @@ const Navbar = class extends React.Component {
       navBarActiveClass: '',
     }
   }
-
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(
@@ -24,11 +23,17 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-            navBarActiveClass: 'is-active',
+            navBarActiveClass: 'header--menu-open',
           })
           : this.setState({
             navBarActiveClass: '',
           })
+        if (this.state.active) {
+          document.body.style.overflow = 'hidden';
+        }
+        else {
+          document.body.style.overflow = 'unset';
+        }
       }
     )
   }
@@ -41,7 +46,7 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
-          <div className="header">
+          <div className={`header ${this.state.navBarActiveClass}`}>
             <div className="navbar-brand">
               <Link to="/" className="navbar-item" title="Logo">
                 <img className="header__logo" src={logo} alt="Elmo-tech" />
@@ -59,7 +64,7 @@ const Navbar = class extends React.Component {
             </div>
             <div
               id="navMenu"
-              className={`navbar-menu ${this.state.navBarActiveClass}`}
+              className="navbar-menu"
             >
               <span className="contact-us">skontaktuj się z nami już dziś <a href="tel:+48 576 226 448">+48 576 226 448</a></span>
               <div className="navbar">
@@ -74,19 +79,15 @@ const Navbar = class extends React.Component {
               </Link>
               </div>
             </div>
-
-            {/* <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div> */}
+            <div className="navbar__phone">
+              <a href="tel:+48 576 226 448">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20.39" height="20.39" viewBox="0 0 20.39 20.39"><path d="M16.9,12.29l-3.8-1.63a.815.815,0,0,0-.951.234l-1.685,2.058A12.591,12.591,0,0,1,4.436,6.933L6.495,5.249A.813.813,0,0,0,6.729,4.3L5.1.493A.821.821,0,0,0,4.164.021L.632.836A.815.815,0,0,0,0,1.631,15.759,15.759,0,0,0,15.761,17.392a.815.815,0,0,0,.795-.632l.815-3.533a.825.825,0,0,0-.476-.938Z" transform="translate(3.319 0) rotate(11)" /></svg></a>
+            </div>
+            <div className="navbar__switcher" onClick={() => this.toggleHamburger()}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       </nav>

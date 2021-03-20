@@ -12,7 +12,7 @@ import iconC from './../../static/img/icons/iconC.svg'
 import iconD from './../../static/img/icons/iconD.svg'
 import iconE from './../../static/img/icons/iconE.svg'
 
-const HomePage = ({ data, benefits }) => (
+const HomePage = ({ data, benefits, portfolio }) => (
   <>
     <section className="intro-banner">
       <div className="container">
@@ -106,10 +106,36 @@ const HomePage = ({ data, benefits }) => (
         </div>
       </div>
     </section>
+    <section className="advantages advantages--secondary">
+      <div className="container">
+        <div className="advantages__wrapper">
+          <h2 className="subheader subheader--left">W zakresie montażu instalacji elektrycznych wykonujemy</h2>
+          <ul>
+            <li>instalacje elektryczne w budynkach mieszkalnych</li>
+            <li>instalacje odgromowe</li>
+            <li>pomiary instalacji elektrycznych</li>
+            <li>oświetlenie LED</li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section className="portfolio">
       <div className="container">
         <div className="portfolio__wrapper">
           <div className="portfolio__item">
+            <div className="portfolio__text">
+              <h3>Oświetlenie rgb sali weselnej</h3>
+              <ul>
+                <li>800 metrów taśm LED</li>
+                <li>sterowanie radiowe</li>
+                <li>konfiguracja kolorystyki, jasności i natężenia</li>
+              </ul>
+            </div>
+            <div className="portfolio__img">
+              <Img fluid={portfolio.image1.image.childImageSharp.fluid} />
+            </div>
+          </div>
+          <div className="portfolio__item portfolio__item--odd">
             <div className="portfolio__text">
               <h3>Instalacja fotowoltaiczna na gruncie</h3>
               <ul>
@@ -119,19 +145,7 @@ const HomePage = ({ data, benefits }) => (
               </ul>
             </div>
             <div className="portfolio__img">
-            </div>
-          </div>
-          <div className="portfolio__item">
-            <div className="portfolio__text">
-              <h3>Oświetlenie rgb sali weselnej</h3>
-              <ul>
-                <li>800 metrów taśm LED</li>
-                <li>sterowanie radiowe</li>
-                <li>konfiguracja kolorystyki i natężenia jasności</li>
-                <li>dynamiczny dobór</li>
-              </ul>
-            </div>
-            <div className="portfolio__img">
+              <Img fluid={portfolio.image2.image.childImageSharp.fluid} />
             </div>
           </div>
         </div>
@@ -264,15 +278,19 @@ IndexPageTemplate.propTypes = {
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
+  portfolio: PropTypes.shape({
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  }),
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(frontmatter.benefits);
+  console.log(frontmatter.portfolio);
 
   return (
     <Layout>
-      <HomePage data={data} benefits={frontmatter.benefits} />
+      <HomePage data={data} benefits={frontmatter.benefits} portfolio={frontmatter.portfolio} />
       {/* <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -335,6 +353,28 @@ export const pageQuery = graphql`
           }
           heading
           description
+        }
+        portfolio {
+          image1 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          image2 {
+            alt
+            image {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
         benefits {
           image1 {

@@ -80,4 +80,11 @@ benefits:
   image4:
     alt: Benefit 4 image
     image: /img/icons/benefit4.png
+portfolio:
+  image1:
+    alt: Portfolio 1 image
+    image: /img/icons/portfolio1.png
+  image2:
+    alt: Portfolio 2 image
+    image: /img/icons/portfolio2.png
 ---

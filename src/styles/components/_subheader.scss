@@ -17,7 +17,14 @@
     margin-right: 50%;
     margin-left: 0;
     @include media-breakpoint-down(md) {
-      margin-right: 20%;
+      margin-right: 0;
+    }
+  }
+  &--left {
+    margin-right: 80px;
+    margin-left: 0;
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
     }
   }
 }

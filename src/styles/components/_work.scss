@@ -1,0 +1,28 @@
+.work {
+  padding: 60px 0;
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: calc((100% / 4) - 20px);
+  }
+  &__image {
+    height: 336px;
+    width: 100%;
+    background-color: rgba(161, 167, 161, 0.14);
+  }
+  &__text {
+    background-color: $color-accent;
+    text-align: center;
+    padding: 18px 0;;
+    p {
+      color: white;
+      &:first-child {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .contact {
-  margin: 120px 0;
+  margin: 60px 0;
   @include media-breakpoint-down(lg) {
     margin: 60px 0;
   }
@@ -19,6 +19,26 @@
       margin-bottom: 50px;
       display: none;
     }
+  }
+  &__item {
+    margin-bottom: 35px;
+
+    p, a {
+      font-size: 20px;
+      color: black;
+    }
+    a {
+      transition: $transition-base;
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+  &__item-text {
+    max-width: 360px;
+    font-weight: 600;
+    padding: 20px 20px 20px 40px;
+    background-color: rgba(161, 167, 161, 0.14);
   }
   &__inputs {
     flex: 1;

@@ -15,6 +15,7 @@
   }
   &__info {
     flex: 1;
+    margin-top: 30px;
     @include media-breakpoint-down(lg) {
       margin-bottom: 50px;
       display: none;
@@ -22,7 +23,7 @@
   }
   &__item {
     margin-bottom: 35px;
-
+    position: relative;
     p, a {
       font-size: 20px;
       color: black;
@@ -33,11 +34,34 @@
         color: $color-accent;
       }
     }
+    &:nth-child(2) {
+      .contact__item-icon {
+        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='63.646' height='54.517' viewBox='0 0 63.646 54.517'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23dc291b;%7D.b%7Bfilter:url(%23a);%7D%3C/style%3E%3Cfilter id='a' x='0' y='0' width='63.646' height='54.517' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeFlood flood-opacity='0.259'/%3E%3CfeComposite operator='in' in2='b'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg class='b' transform='matrix(1, 0, 0, 1, 0, 0)'%3E%3Cpath class='a' d='M44.081,6H7.565a4.559,4.559,0,0,0-4.542,4.565L3,37.952a4.578,4.578,0,0,0,4.565,4.565H44.081a4.578,4.578,0,0,0,4.565-4.565V10.565A4.578,4.578,0,0,0,44.081,6Zm0,9.129L25.823,26.541,7.565,15.129V10.565L25.823,21.976,44.081,10.565Z' transform='translate(6)'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+    &:nth-child(3) {
+      .contact__item-icon {
+        background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='64.21' height='64.21' viewBox='0 0 64.21 64.21'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23dc291b;%7D.b%7Bfilter:url(%23a);%7D%3C/style%3E%3Cfilter id='a' x='0' y='0' width='64.21' height='64.21' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeFlood flood-opacity='0.49'/%3E%3CfeComposite operator='in' in2='b'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg class='b' transform='matrix(1, 0, 0, 1, 0, 0)'%3E%3Cpath class='a' d='M36.359,1.813,28.695.044a1.78,1.78,0,0,0-2.026,1.024L23.131,9.322a1.764,1.764,0,0,0,.508,2.063l4.466,3.655A27.31,27.31,0,0,1,15.048,28.1l-3.655-4.466a1.767,1.767,0,0,0-2.063-.508L1.076,26.661A1.79,1.79,0,0,0,.044,28.695l1.769,7.664a1.768,1.768,0,0,0,1.724,1.371A34.188,34.188,0,0,0,37.729,3.537,1.766,1.766,0,0,0,36.359,1.813Z' transform='matrix(-0.26, 0.97, -0.97, -0.26, 55.21, 15.77)'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+  }
+  &__item-icon {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='64.2' height='84' viewBox='0 0 64.2 84'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23dc291b;%7D.b%7Bfilter:url(%23a);%7D%3C/style%3E%3Cfilter id='a' x='0' y='0' width='64.2' height='84' filterUnits='userSpaceOnUse'%3E%3CfeOffset dy='3' input='SourceAlpha'/%3E%3CfeGaussianBlur stdDeviation='3' result='b'/%3E%3CfeFlood flood-opacity='0.49'/%3E%3CfeComposite operator='in' in2='b'/%3E%3CfeComposite in='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Cg class='b' transform='matrix(1, 0, 0, 1, 0, 0)'%3E%3Cpath class='a' d='M30.6,3A23.083,23.083,0,0,0,7.5,26.1C7.5,43.425,30.6,69,30.6,69S53.7,43.425,53.7,26.1A23.083,23.083,0,0,0,30.6,3Zm0,31.35a8.25,8.25,0,1,1,8.25-8.25A8.253,8.253,0,0,1,30.6,34.35Z' transform='translate(1.5 3)'/%3E%3C/g%3E%3C/svg%3E");
   }
   &__item-text {
     max-width: 360px;
     font-weight: 600;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 20px 50px;
     background-color: rgba(161, 167, 161, 0.14);
   }
   &__inputs {
@@ -74,18 +98,19 @@
     display: flex;
     justify-content: space-between;
     input {
-      width: 300px;
-      @include media-breakpoint-down(xxl) {
-        width: 265px;
-      }
-      @include media-breakpoint-down(xl) {
-        width: 220px;
-      }
+      min-width: 100%;
+      // @include media-breakpoint-down(xxl) {
+      //   width: 265px;
+      // }
+      // @include media-breakpoint-down(xl) {
+      //   width: 220px;
+      // }
     }
     .field {
-      @include media-breakpoint-down(lg) {
-        width: 48%;
-      }
+      width: 48%;
+      // @include media-breakpoint-down(lg) {
+      //   width: 48%;
+      // }
       input {
         @include media-breakpoint-down(lg) {
           width: 100%;

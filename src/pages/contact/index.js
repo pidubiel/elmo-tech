@@ -43,17 +43,23 @@ export default class Index extends React.Component {
             <div className="contact__wrapper">
               <div className="contact__info">
                 <div className="contact__item">
+                  <div className="contact__item-icon">
+                  </div>
                   <div className="contact__item-text">
                     <p>ul. Krzywa 11</p>
                     <p>37-400 Nisko</p>
                   </div>
                 </div>
                 <div className="contact__item">
+                  <div className="contact__item-icon">
+                  </div>
                   <div className="contact__item-text">
                     <a href="mailto:elmotech.sp@gmail.com">elmotech.sp@gmail.com</a>
                   </div>
                 </div>
                 <div className="contact__item">
+                  <div className="contact__item-icon">
+                  </div>
                   <div className="contact__item-text">
                     <a href="tel:+48 576 226 448">+48 576 226 448</a>
                   </div>

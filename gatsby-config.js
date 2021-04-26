@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Elmo-tech',
+    title: 'Elmo-tech - instalacje fotowoltaiczne i elektryczne',
     description:
-      'Instalacje fotowoltaiczne i elektryczne.',
+      'Montaż instalacji fotowoltaicznych i elektrycznych. Darmowa wycena. Podkarpacie, Rzeszów, Nisko',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

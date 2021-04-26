@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-//import introImg from './../../static/img/intro-img.png'
 import Img from 'gatsby-image'
 import iconA from './../../static/img/icons/iconA.svg'
 import iconB from './../../static/img/icons/iconB.svg'
@@ -286,8 +285,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(frontmatter.portfolio);
-
   return (
     <Layout>
       <HomePage data={data} benefits={frontmatter.benefits} portfolio={frontmatter.portfolio} />

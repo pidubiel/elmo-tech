@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Elmo-tech - instalacje fotowoltaiczne i elektryczne',
     description:
-      'Montaż instalacji fotowoltaicznych i elektrycznych. Darmowa wycena. Podkarpacie, Rzeszów, Nisko',
+      'Montaż instalacji fotowoltaicznych i elektrycznych. Darmowa wycena, profesjonalny sprzęt, gwarancja najwyższej jakości. Małopolskie, podkarpackie, świętokrzyskie, lubelskie.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

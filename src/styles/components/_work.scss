@@ -23,6 +23,9 @@
     height: 336px;
     width: 100%;
     background-color: rgb(237, 237, 237);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 10px;
     position: relative;
     &:after {

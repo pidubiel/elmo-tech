@@ -7,6 +7,7 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const urlLink = "https://i.ibb.co/xGfqBFd/1.jpg";
 
     return (
       <>
@@ -14,31 +15,87 @@ class BlogRoll extends React.Component {
           <div className="work">
             <div className="work__grid">
               <div className="work__item">
-                <div className="work__image"></div>
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/xGfqBFd/1.jpg)` }}></div>
                 <div className="work__text">
                   <p>Pysznica</p>
                   <p>3.5kWp</p>
                 </div>
               </div>
               <div className="work__item">
-                <div className="work__image"></div>
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/MpzVdkq/2.jpg)` }}></div>
                 <div className="work__text">
-                  <p>Pysznica</p>
-                  <p>3.5kWp</p>
+                  <p>Nisko</p>
+                  <p>4.235kWp</p>
                 </div>
               </div>
               <div className="work__item">
-                <div className="work__image"></div>
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/RBBL4cr/3.jpg)` }}></div>
                 <div className="work__text">
-                  <p>Pysznica</p>
-                  <p>3.5kWp</p>
+                  <p>Nienadówka</p>
+                  <p>8.8kWp</p>
                 </div>
               </div>
               <div className="work__item">
-                <div className="work__image"></div>
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/x3zvTgk/4.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Nisko</p>
+                  <p>3.3kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/6wgCsT3/5.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Janów Lubelski</p>
+                  <p>OŚWIETLENIE LED</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/34tMy27/6.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Bogoria</p>
+                  <p>5.2kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/rF1f1XL/7.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Słonowice</p>
+                  <p>8.5kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/LxwzWW3/8.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Samocice</p>
+                  <p>8.8kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/Wvt1jfR/9.jpg)` }}></div>
                 <div className="work__text">
                   <p>Pysznica</p>
-                  <p>3.5kWp</p>
+                  <p>3.2kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/6Bh2D1z/10.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Tarnobrzeg</p>
+                  <p>2.275kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/Y7LTj1r/11.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Tarnobrzeg</p>
+                  <p>5.04kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/2FZgVbR/12.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Przemyśl</p>
+                  <p>7.4kWp</p>
                 </div>
               </div>
             </div>

@@ -98,6 +98,55 @@ class BlogRoll extends React.Component {
                   <p>7.4kWp</p>
                 </div>
               </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/6yFBdrV/13.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Lipa</p>
+                  <p>3.85kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/GdrWG4m/14.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Borowa</p>
+                  <p>4.02kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/wLWLvvZ/15.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Lipa</p>
+                  <p>4.48kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/1L3jymC/16.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Radymno</p>
+                  <p>5.07kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/6PytWX8/17.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Żohatyn</p>
+                  <p>2.68kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/0r4Gdtt/18.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Nisko</p>
+                  <p>Rozdzielnica mieszkaniowa</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/6BppvX2/19.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Janów Lubelski</p>
+                  <p>Ogrzewanie podłogowe</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

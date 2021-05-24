@@ -139,7 +139,7 @@ const HomePage = ({ data, benefits, portfolio }) => (
               <h3>Instalacja fotowoltaiczna na gruncie</h3>
               <ul>
                 <li>moc 2.56 kWp</li>
-                <li>konstrukcja jednooporowa</li>
+                <li>konstrukcja jednopodporowa</li>
                 <li>kąt nachylenia 30 stopni</li>
               </ul>
             </div>

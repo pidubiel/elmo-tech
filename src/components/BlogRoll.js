@@ -147,6 +147,34 @@ class BlogRoll extends React.Component {
                   <p>Ogrzewanie podłogowe</p>
                 </div>
               </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/xm1BFjY/20.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Nisko</p>
+                  <p>3.465kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/Gnyg0GW/21.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Zamość</p>
+                  <p>4.28kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/xf8KsFh/22.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Nisko</p>
+                  <p>5.39kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/KyYpzVW/23.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Kraśnik</p>
+                  <p>5.85kWp</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

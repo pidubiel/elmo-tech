@@ -175,6 +175,125 @@ class BlogRoll extends React.Component {
                   <p>5.85kWp</p>
                 </div>
               </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/BgPgrsQ/24.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Gorzyce</p>
+                  <p>9.99kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/PxFgSDN/25.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Jamnica</p>
+                  <p>4.45kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/txMLcK4/26.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Jamnica</p>
+                  <p>7.41kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/gtghsgd/27.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Piaski Brzóstowskie</p>
+                  <p>5.35kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/0hgKy5j/28.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Pysznica</p>
+                  <p>4.48kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/KrdV40J/29.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Stalowa Wola</p>
+                  <p>8.61kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/zZgVrMP/30.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Wiązownica Duża</p>
+                  <p>6.4kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/WDXLW00/1a.png)` }}></div>
+                <div className="work__text">
+                  <p>Harasiuki</p>
+                  <p>4.56kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/HPyb1gv/2a.png)` }}></div>
+                <div className="work__text">
+                  <p>Pysznica</p>
+                  <p>4.74kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/ZJc7JRw/3a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Ożarów</p>
+                  <p>5.4kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/FW9Y5Fr/4a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Błażek</p>
+                  <p>5.46kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/dMbwrVt/5a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Nisko</p>
+                  <p>5.67kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/k4ZRh3C/6a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Janów Lubelski</p>
+                  <p>6.48kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/CnxqXdF/7a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Stalowa Wola</p>
+                  <p>6.48kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/CJj62cC/8a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Janów Lubelski</p>
+                  <p>6.075kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/72LWc2n/10a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Tarnów</p>
+                  <p>9.4kWp</p>
+                </div>
+              </div>
+              <div className="work__item">
+                <div className="work__image" style={{ backgroundImage: `url(https://i.ibb.co/g3f8Mff/9a.jpg)` }}></div>
+                <div className="work__text">
+                  <p>Rzeczyca Długa</p>
+                  <p>Instalacja elektryczna</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
